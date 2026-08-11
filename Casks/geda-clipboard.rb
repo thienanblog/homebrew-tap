@@ -18,7 +18,10 @@ cask "geda-clipboard" do
   # self-updated copy to be a broken install and reinstall the pinned version
   # over the top of it, quietly walking users backwards.
   auto_updates true
-  depends_on macos: ">= :ventura"
+  # Ventura is macOS 13, the LSMinimumSystemVersion in the bundle. The bare
+  # symbol is the minimum; Homebrew 6 deprecated the ">= :ventura" string form
+  # that used to be needed to say so.
+  depends_on macos: :ventura
 
   app "Geda Clipboard.app"
 

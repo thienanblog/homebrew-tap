@@ -1,6 +1,6 @@
 cask "geda-clipboard" do
-  version "0.7.2"
-  sha256 "92b02573675bac9ba7bbbe8325367f16b6d59ea54c62b6958c18f13148f46aaa"
+  version "0.8.0"
+  sha256 "95957157c7a89c28162e3045785275355d454306e346fb6b89410e812e7a7ac4"
 
   url "https://github.com/thienanblog/geda-clipboard/releases/download/v#{version}/geda-clipboard-#{version}-macos-universal.zip"
   name "Geda Clipboard"

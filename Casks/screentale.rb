@@ -8,22 +8,22 @@
 #     brew tap thienanblog/tap
 #     brew install --cask screentale
 cask "screentale" do
-  version "0.33.0"
-  sha256 "e31eab3107bbf07df1866828715ccb08c4c1d3795eede64b714f3f1a0240fcae"
+  version "1.0.0"
+  sha256 "cdf8b0283a00308c41422ea9899c889259b036ebb5ef0721a480a70b3db6cf21"
 
   url "https://github.com/thienanblog/screentale-releases/releases/download/v#{version}/ScreenTale-#{version}.dmg"
   name "ScreenTale"
   desc "Screen recorder with cursor-following zoom"
   homepage "https://github.com/thienanblog/screentale-releases"
 
-  # The Sparkle feed the app itself polls, so Homebrew learns about a release from the same
-  # place, at the same moment, as an already-installed copy.
+  # Retained compatibility feed for Swift migration clients and Homebrew release discovery.
+  # The primary Rust app uses the signed Tauri feed for its own update checks.
   livecheck do
     url "https://thienanblog.github.io/screentale-releases/appcast.xml"
     strategy :sparkle
   end
 
-  # The app updates itself through Sparkle, so Homebrew must not treat a self-updated copy
+  # The app updates itself, so Homebrew must not treat a self-updated copy
   # as a corrupted install and must not try to "downgrade" it back to the pinned version.
   auto_updates true
 

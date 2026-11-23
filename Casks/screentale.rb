@@ -8,8 +8,8 @@
 #     brew tap thienanblog/tap
 #     brew install --cask screentale
 cask "screentale" do
-  version "1.32.0"
-  sha256 "edb683c81cafac33153b2533937aa79ac3d6b4c2c5334147c80860ff39494c29"
+  version "1.36.1"
+  sha256 "2b3a17b4fc76bc7c70c998e74ebb6b58146746ee7f6325596b226c53e123a68d"
 
   url "https://github.com/thienanblog/screentale-releases/releases/download/v#{version}/ScreenTale-#{version}.dmg"
   name "ScreenTale"
